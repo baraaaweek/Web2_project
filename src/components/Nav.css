@@ -1,0 +1,124 @@
+.site-header {
+  position: relative;
+  z-index: 2;
+  width: min(1240px, calc(100% - 36px));
+  margin: 20px auto 28px;
+  padding: 10px 12px 10px 20px;
+  border: 1px solid rgba(117, 136, 199, 0.18);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 12px 32px rgba(48, 62, 108, 0.09);
+  backdrop-filter: blur(14px);
+}
+
+.site-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.site-brand {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 11px;
+  color: #202b4d;
+  text-decoration: none;
+}
+
+.site-brand-mark {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border-radius: 14px;
+  color: #fff;
+  background: linear-gradient(140deg, #344d9d, #7652d8);
+  box-shadow: 0 7px 16px rgba(87, 84, 191, 0.24);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.55rem;
+  font-weight: 700;
+}
+
+.site-brand-copy {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.site-brand-copy strong {
+  font-size: 1.05rem;
+  letter-spacing: -0.02em;
+}
+
+.site-brand-copy small {
+  margin-top: 3px;
+  color: #77819b;
+  font-size: 0.72rem;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 5px;
+}
+
+.site-nav-link {
+  position: relative;
+  padding: 10px 13px;
+  border-radius: 11px;
+  color: #58647f;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.18s ease, background 0.18s ease, transform 0.18s ease;
+}
+
+.site-nav-link:hover {
+  color: #2e4389;
+  background: #f0f3ff;
+  transform: translateY(-1px);
+}
+
+.site-nav-link.active {
+  color: #fff;
+  background: linear-gradient(135deg, #344d9d, #6650cf);
+  box-shadow: 0 7px 16px rgba(87, 84, 191, 0.2);
+}
+
+.site-nav-link:focus-visible,
+.site-brand:focus-visible {
+  outline: 3px solid #e8ad62;
+  outline-offset: 3px;
+}
+
+@media (max-width: 760px) {
+  .site-header {
+    width: calc(100% - 24px);
+    margin: 12px auto 20px;
+    padding: 14px;
+  }
+
+  .site-header-inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .site-nav {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 4px;
+    overflow-x: auto;
+    padding: 2px 1px 5px;
+    scrollbar-width: thin;
+  }
+
+  .site-nav-link {
+    padding: 9px 11px;
+    font-size: 0.84rem;
+  }
+}
